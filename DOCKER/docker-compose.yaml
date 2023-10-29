@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0.11-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - D:/database/store-microservice-application/mongodb/data:/data/db
+    networks:
+      - node-network
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: product_service_admin
+      MONGO_INITDB_ROOT_PASSWORD: product_service_password
+      MONGO_INITDB_DATABASE: products
+
+networks:
+  node-network:
+    driver: bridge
