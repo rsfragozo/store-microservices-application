@@ -5,7 +5,6 @@ import org.atcoffeebreak.productservice.dto.ProductResponse;
 import org.atcoffeebreak.productservice.model.Product;
 
 public class ProductMapper {
-
     public static Product mapToProduct(ProductRequest productRequest) {
         return Product.builder()
                 .name(productRequest.getName())

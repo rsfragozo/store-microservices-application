@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orders
+    username: order_service_admin
+    password: order_service_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081

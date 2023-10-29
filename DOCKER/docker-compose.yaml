@@ -6,7 +6,7 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - D:/database/store-microservice-application/mongodb/data:/data/db
+      - /d/database/store-microservice-application/mongodb/data:/data/db
     networks:
       - node-network
     restart: always
@@ -14,6 +14,19 @@ services:
       MONGO_INITDB_ROOT_USERNAME: product_service_admin
       MONGO_INITDB_ROOT_PASSWORD: product_service_password
       MONGO_INITDB_DATABASE: products
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - /d/database/store-microservice-application/postgresql/data:/var/lib/postgresql/data
+    networks:
+      - node-network
+    restart: always
+    environment:
+      POSTGRES_USER: 'order_service_admin'
+      POSTGRES_PASSWORD: 'order_service_password'
+      POSTGRES_DB: 'orders'
 
 networks:
   node-network:

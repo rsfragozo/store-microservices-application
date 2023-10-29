@@ -16,6 +16,8 @@
     <description>Store management system</description>
     <modules>
         <module>product-service</module>
+        <module>order-service</module>
+        <module>inventory-service</module>
     </modules>
     <packaging>pom</packaging>
 
