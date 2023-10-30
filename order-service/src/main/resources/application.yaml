@@ -1,4 +1,10 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
 spring:
+  application:
+    name: order-service
   datasource:
     url: jdbc:postgresql://localhost:5432/orders
     username: order_service_admin

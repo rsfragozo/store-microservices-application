@@ -6,3 +6,6 @@ eureka:
     fetch-registry: false
 server:
   port: 8761
+spring:
+  application:
+    name: order-service
